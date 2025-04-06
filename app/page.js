@@ -1,4 +1,5 @@
-import BlogItem from "@/componets/BlogItem";
+
+import BlogList from "@/componets/BlogList";
 import Header from "@/componets/Header";
 
 
@@ -6,7 +7,7 @@ export default function Home() {
   return (
    <>
    <Header />
-   <BlogItem />
+    <BlogList />
    </>
   );
 }
