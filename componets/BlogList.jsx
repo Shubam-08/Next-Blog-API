@@ -1,11 +1,12 @@
 'use client'
 import { blog_data } from '@/assets/assets'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import BlogItem from './BlogItem'
 const BlogList = () => {
 
   const [menu,setMenu] = useState("All");
   
+
   return (
     <div>
       <div className='flex justify-center gap-6 my-10'>
@@ -22,6 +23,7 @@ const BlogList = () => {
         {blog_data.filter((item) => menu==="All"?true:item.category===menu).map((item, index) => (
           <BlogItem
             key={index}
+            id = {item.id}
             image={item.image}
             title={item.title}
             description={item.description}
